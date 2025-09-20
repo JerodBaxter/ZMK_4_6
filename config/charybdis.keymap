@@ -38,6 +38,11 @@
             bindings = <&sys_reset>;
             key-positions = <11 23>;
         };
+
+        Mouse {
+            bindings = <&to 3>;
+            key-positions = <28 27>;
+        };
     };
 
     trackball_listener {
