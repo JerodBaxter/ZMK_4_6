@@ -9,16 +9,6 @@
     combos {
         compatible = "zmk,combos";
 
-        ParaLeft {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <4 16>;
-        };
-
-        ParaRight {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <7 19>;
-        };
-
         bootloaderLeft {
             bindings = <&bootloader>;
             key-positions = <0 13>;
@@ -41,7 +31,7 @@
 
         Mouse {
             bindings = <&to 3>;
-            key-positions = <28 27>;
+            key-positions = <17 5>;
         };
     };
 
@@ -113,7 +103,7 @@
 &kp ESC       &kp N1       &kp N2       &kp N3       &kp N4        &kp N5         &kp N6         &kp N7       &kp N8     &kp N9   &kp N0                     &kp DEL
 &kp TAB       &mt LC(Q) Q  &mt LC(W) W  &mt TILDE E  &kp R         &kp T          &mt LC(Y) Y    &kp U        &kp I      &kp O    &mt LC(P) P                &mt RIGHT_BRACKET LEFT_BRACKET
 &sk LEFT_GUI  &mt LC(A) A  &mt LC(S) S  &kp D        &mt LC(F) F   &kp G          &kp H          &kp J        &kp K      &kp L    &kp SEMI                   &kp APOS
-&sk LSHFT     &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C  &mt LC(V) V   &mt LC(B) B    &kp N          &kp M        &kp COMMA  &kp DOT  &mt NON_US_BACKSLASH FSLH  &mt RSHIFT LS(LALT)
+&sk LSHFT     &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C  &mt LC(V) V   &mt LC(B) B    &mt LC(N) N    &kp M        &kp COMMA  &kp DOT  &mt NON_US_BACKSLASH FSLH  &mt RSHIFT LS(LALT)
                                         &lt 1 SPACE  &kp LEFT_ALT  &kp ENTER      &kp RIGHT_ALT  &lt 2 SPACE
                                                      &kp LCTRL     &kp SPACE      &kp BSPC
             >;
@@ -128,7 +118,7 @@
 &trans          &trans  &kp LEFT  &kp DOWN   &kp RIGHT  &trans        &kp PAGE_DOWN    &kp N4                  &kp N5  &kp N6   &kp PLUS   &kp COMMA
 &studio_unlock  &trans  &trans    &trans     &trans     &trans        &kp PRINTSCREEN  &kp N1                  &kp N2  &kp N3   &kp MINUS  &kp ENTER
                                   &mkp LCLK  &mkp MB3   &mkp RCLK     &mo 3            &mt RIGHT_SHIFT PERIOD
-                                             &trans     &trans        &kp RCTRL
+                                             &to 0      &trans        &kp RCTRL
             >;
         };
 
@@ -141,7 +131,7 @@
 &trans  &bt BT_CLR    &bt BT_PRV  &bt BT_NXT  &trans    &to 0          &kp UNDER    &kp EQUAL   &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
 &trans  &out OUT_TOG  &trans      &trans      &trans    &trans         &kp MINUS    &kp PLUS    &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
                                   &trans      &trans    &trans         &trans       &trans
-                                              &trans    &trans         &trans
+                                              &to 0     &trans         &trans
             >;
         };
 
