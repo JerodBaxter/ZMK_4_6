@@ -118,12 +118,12 @@
             label = "Lower";
             display-name = "Lower";
             bindings = <
-&kp F1          &kp F2  &kp F3    &kp F4    &kp F5     &kp F6        &kp F7           &kp F8                  &kp F9  &kp F10  &kp F11    &kp F12
-&trans          &trans  &kp HOME  &kp UP    &kp END    &kp INSERT    &kp PAGE_UP      &kp N7                  &kp N8  &kp N9   &kp N0     &kp PERIOD
-&trans          &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans        &kp PAGE_DOWN    &kp N4                  &kp N5  &kp N6   &kp PLUS   &kp COMMA
-&studio_unlock  &trans  &trans    &trans    &trans     &trans        &kp PRINTSCREEN  &kp N1                  &kp N2  &kp N3   &kp MINUS  &kp ENTER
-                                  &trans    &trans     &trans        &mo 4            &mt RIGHT_SHIFT PERIOD
-                                            &trans     &trans        &kp RCTRL
+&kp F1          &kp F2  &kp F3    &kp F4     &kp F5     &kp F6        &kp F7           &kp F8                  &kp F9  &kp F10  &kp F11    &kp F12
+&trans          &trans  &kp HOME  &kp UP     &kp END    &kp INSERT    &kp PAGE_UP      &kp N7                  &kp N8  &kp N9   &kp N0     &kp PERIOD
+&trans          &trans  &kp LEFT  &kp DOWN   &kp RIGHT  &trans        &kp PAGE_DOWN    &kp N4                  &kp N5  &kp N6   &kp PLUS   &kp COMMA
+&studio_unlock  &trans  &trans    &trans     &trans     &trans        &kp PRINTSCREEN  &kp N1                  &kp N2  &kp N3   &kp MINUS  &kp ENTER
+                                  &mkp LCLK  &mkp MB3   &mkp RCLK     &mo 3            &mt RIGHT_SHIFT PERIOD
+                                             &trans     &trans        &kp RCTRL
             >;
         };
 
@@ -140,28 +140,15 @@
             >;
         };
 
-        Game {
-            label = "Game ++";
-            display-name = "Game";
-            bindings = <
-&trans   &trans        &trans        &trans        &trans        &trans          &trans         &trans         &trans         &trans         &trans         &trans
-&kt F5   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp LC(RA(Y))  &kp LC(RA(U))  &kp LC(RA(I))  &kp LC(RA(H))  &kp LC(RA(J))  &kp LC(RA(DEL))
-&to 0    &kp L         &kp O         &kp Y         &kp K         &kp G           &trans         &trans         &trans         &trans         &trans         &kp LA(F4)
-&kp F10  &none         &to 0         &none         &kp NUMBER_6  &kp NUMBER_7    &trans         &trans         &trans         &trans         &trans         &to 0
-                                     &trans        &trans        &trans          &trans         &trans
-                                                   &trans        &trans          &trans
-            >;
-        };
-
         Mouse {
             display-name = "Mouse";
             bindings = <
-&trans  &trans  &trans  &trans     &trans    &trans       &trans    &trans    &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans    &trans       &trans    &trans    &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans    &trans       &trans    &trans    &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans    &trans       &trans    &trans    &trans  &trans  &trans  &trans
-                        &mkp LCLK  &mkp MB3  &mkp RCLK    &mkp MB4  &mkp MB5
-                                   &trans    &trans       &trans
+&trans  &trans  &trans          &trans          &trans           &trans       &trans    &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans          &msc SCRL_UP    &trans           &trans       &trans    &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans       &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans       &trans    &trans          &trans          &trans           &trans  &trans
+                                &mkp LCLK       &mkp MB3         &mkp RCLK    &mkp MB4  &mkp MB5
+                                                &to 0            &to 1        &to 3
             >;
         };
     };
