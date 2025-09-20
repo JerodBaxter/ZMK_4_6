@@ -1,8 +1,6 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -118,7 +116,7 @@
 &trans          &trans  &kp LEFT  &kp DOWN   &kp RIGHT  &trans        &kp PAGE_DOWN    &kp N4                  &kp N5  &kp N6   &kp PLUS   &kp COMMA
 &studio_unlock  &trans  &trans    &trans     &trans     &trans        &kp PRINTSCREEN  &kp N1                  &kp N2  &kp N3   &kp MINUS  &kp ENTER
                                   &mkp LCLK  &mkp MB3   &mkp RCLK     &mo 3            &mt RIGHT_SHIFT PERIOD
-                                             &to 0      &trans        &kp RCTRL
+                                             &to 0      &to 3         &kp RCTRL
             >;
         };
 
@@ -126,12 +124,12 @@
             label = "Raise";
             display-name = "Raise";
             bindings = <
-&trans  &trans        &trans      &trans      &trans    &bootloader    &bootloader  &sys_reset  &trans           &trans    &trans    &trans
-&trans  &kp EXCL      &kp AT      &kp HASH    &kp DLLR  &kp PRCNT      &kp CARET    &kp AMPS    &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp DEL
-&trans  &bt BT_CLR    &bt BT_PRV  &bt BT_NXT  &trans    &to 0          &kp UNDER    &kp EQUAL   &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_TOG  &trans      &trans      &trans    &trans         &kp MINUS    &kp PLUS    &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                                  &trans      &trans    &trans         &trans       &trans
-                                              &to 0     &trans         &trans
+&trans  &trans    &trans  &trans    &trans    &bootloader    &bootloader  &sys_reset  &trans        &trans    &trans    &trans
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET    &kp AMPS    &kp ASTERISK  &kp LPAR  &kp RPAR  &kp DEL
+&trans  &trans    &trans  &trans    &trans    &trans         &kp UNDER    &kp EQUAL   &kp LBKT      &kp RBKT  &kp BSLH  &kp GRAVE
+&trans  &trans    &trans  &trans    &trans    &trans         &kp MINUS    &kp PLUS    &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
+                          &trans    &trans    &trans         &trans       &trans
+                                    &to 0     &to 1          &to 3
             >;
         };
 
@@ -143,7 +141,7 @@
 &trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans       &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans          &trans          &trans           &trans       &trans    &trans          &trans          &trans           &trans  &trans
                                 &mkp LCLK       &mkp MB3         &mkp RCLK    &mkp MB4  &mkp MB5
-                                                &to 0            &to 1        &to 3
+                                                &to 0            &to 1        &to 2
             >;
         };
     };
