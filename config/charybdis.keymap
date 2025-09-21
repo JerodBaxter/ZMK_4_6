@@ -124,24 +124,24 @@
             label = "Raise";
             display-name = "Raise";
             bindings = <
-&trans  &trans    &trans  &trans    &trans    &bootloader    &bootloader  &sys_reset  &trans        &trans    &trans    &trans
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET    &kp AMPS    &kp ASTERISK  &kp LPAR  &kp RPAR  &kp DEL
-&trans  &trans    &trans  &trans    &trans    &trans         &kp UNDER    &kp EQUAL   &kp LBKT      &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &trans    &trans  &trans    &trans    &trans         &kp MINUS    &kp PLUS    &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
-                          &mo 3     &trans    &trans         &trans       &trans
-                                    &to 0     &to 1          &to 3
+&trans  &trans    &kp AT_SIGN  &kp HASH  &trans    &bootloader    &bootloader  &sys_reset  &trans        &trans    &trans    &trans
+&trans  &kp EXCL  &kp AT       &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET    &kp AMPS    &kp ASTERISK  &kp LPAR  &kp RPAR  &kp DEL
+&trans  &trans    &trans       &trans    &trans    &trans         &kp UNDER    &kp EQUAL   &kp LBKT      &kp RBKT  &kp BSLH  &kp GRAVE
+&trans  &trans    &trans       &trans    &trans    &trans         &kp MINUS    &kp PLUS    &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
+                               &mo 3     &trans    &trans         &trans       &trans
+                                         &to 0     &to 1          &to 3
             >;
         };
 
         Mouse {
             display-name = "Mouse";
             bindings = <
-&trans  &trans  &trans          &trans          &trans           &trans       &trans    &trans          &trans          &trans           &trans  &trans
-&trans  &trans  &trans          &msc SCRL_UP    &trans           &trans       &trans    &trans          &mmv MOVE_UP    &trans           &trans  &trans
-&trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans       &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans       &trans    &trans          &trans          &trans           &trans  &trans
-                                &mkp LCLK       &mkp MB3         &mkp RCLK    &mkp MB4  &mkp MB5
-                                                &to 0            &to 1        &to 2
+&trans          &trans  &trans          &trans          &trans           &trans       &trans     &trans          &trans          &trans           &trans  &trans
+&trans          &trans  &mkp RCLK       &msc SCRL_UP    &mkp LCLK        &mkp MCLK    &mkp MCLK  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
+&trans          &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &mkp MB4     &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&sk LEFT_SHIFT  &trans  &trans          &trans          &trans           &mkp MB5     &mkp MB5   &trans          &trans          &trans           &trans  &sk LCTRL
+                                        &trans          &trans           &trans       &trans     &trans
+                                                        &trans           &trans       &trans
             >;
         };
     };
