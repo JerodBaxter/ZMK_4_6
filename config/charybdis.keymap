@@ -122,7 +122,7 @@
 &trans  &trans                &kp AT_SIGN           &kp DOLLAR  &kp HASH               &trans      &trans       &trans            &kp CARET       &trans             &trans           &trans
 &trans  &kp GRAVE             &kp LESS_THAN         &kp HASH    &kp GREATER_THAN       &kp SQT     &trans       &kp LEFT_BRACKET  &kp UNDERSCORE  &kp RIGHT_BRACKET  &trans           &trans
 &trans  &kp NON_US_BACKSLASH  &kp LEFT_PARENTHESIS  &kp MINUS   &kp RIGHT_PARENTHESIS  &kp PLUS    &kp PERCENT  &kp LEFT_BRACE    &kp SEMICOLON   &kp RIGHT_BRACE    &kp EXCLAMATION  &trans
-&kp A   &trans                &kp ASTERISK          &kp COLON   &kp SLASH              &trans      &trans       &kp PIPE          &kp TILDE       &kp AMPERSAND      &trans           &trans
+&trans  &trans                &kp ASTERISK          &kp COLON   &kp SLASH              &trans      &trans       &kp PIPE          &kp TILDE       &kp AMPERSAND      &trans           &trans
                                                     &mo 3       &trans                 &trans      &trans       &trans
                                                                 &trans                 &trans      &trans
             >;
