@@ -26,11 +26,6 @@
             bindings = <&sys_reset>;
             key-positions = <11 23>;
         };
-
-        Mouse {
-            bindings = <&to 3>;
-            key-positions = <17 5>;
-        };
     };
 
     trackball_listener {
