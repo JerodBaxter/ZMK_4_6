@@ -111,12 +111,12 @@
             label = "Lower";
             display-name = "Lower";
             bindings = <
-&kp F1          &kp F2  &kp F3              &kp F4    &kp F5         &kp F6        &kp F7            &kp F8  &kp F9  &kp F10  &kp F11    &kp F12
-&trans          &trans  &kp HOME            &kp UP    &kp END        &kp INSERT    &kp PAGE_UP       &kp N7  &kp N8  &kp N9   &kp N0     &kp PERIOD
-&trans          &trans  &kp LEFT            &kp DOWN  &kp RIGHT      &kp ENTER     &kp PAGE_DOWN     &kp N4  &kp N5  &kp N6   &kp PLUS   &kp COMMA
-&studio_unlock  &trans  &kp LC(LEFT_ARROW)  &kp CAPS  &kp LC(RIGHT)  &kp DEL       &kp PRINTSCREEN   &kp N1  &kp N2  &kp N3   &kp MINUS  &kp ENTER
-                                            &trans    &mkp LCLK      &mkp RCLK     &mt LSHFT PERIOD  &mo 3
-                                                      &trans         &trans        &kp RCTRL
+&kp F1         &kp F2  &kp F3              &kp F4    &kp F5         &kp F6        &kp F7           &kp F8  &kp F9  &kp F10  &kp F11    &kp F12
+&trans         &trans  &kp HOME            &kp UP    &kp END        &kp INSERT    &kp PAGE_UP      &kp N7  &kp N8  &kp N9   &kp N0     &kp PERIOD
+&trans         &trans  &kp LEFT            &kp DOWN  &kp RIGHT      &kp ENTER     &kp PAGE_DOWN    &kp N4  &kp N5  &kp N6   &kp PLUS   &kp COMMA
+&sk LS(LCTRL)  &trans  &kp LC(LEFT_ARROW)  &kp CAPS  &kp LC(RIGHT)  &kp DEL       &kp PRINTSCREEN  &kp N1  &kp N2  &kp N3   &kp MINUS  &kp ENTER
+                                           &trans    &trans         &trans        &trans           &mo 3
+                                                     &trans         &trans        &kp PERIOD
             >;
         };
 
@@ -124,19 +124,19 @@
             label = "Raise";
             display-name = "Raise";
             bindings = <
-&trans  &trans                &kp AT_SIGN           &kp DOLLAR  &kp HASH               &bootloader    &bootloader  &sys_reset  &trans        &trans    &trans    &trans
-&trans  &kp GRAVE             &kp LESS_THAN         &kp HASH    &kp GREATER_THAN       &kp SQT        &kp CARET    &kp AMPS    &kp ASTERISK  &kp LPAR  &kp RPAR  &kp DEL
-&trans  &kp NON_US_BACKSLASH  &kp LEFT_PARENTHESIS  &kp MINUS   &kp RIGHT_PARENTHESIS  &kp PLUS       &kp UNDER    &kp EQUAL   &kp LBKT      &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &trans                &kp ASTERISK          &kp COLON   &kp SLASH              &trans         &kp MINUS    &kp PLUS    &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
-                                                    &mo 3       &trans                 &trans         &trans       &trans
-                                                                &trans                 &trans         &trans
+&trans  &trans                &kp AT_SIGN           &kp DOLLAR  &kp HASH               &trans      &trans       &trans            &kp CARET       &trans             &trans           &trans
+&trans  &kp GRAVE             &kp LESS_THAN         &kp HASH    &kp GREATER_THAN       &kp SQT     &trans       &kp LEFT_BRACKET  &kp UNDERSCORE  &kp RIGHT_BRACKET  &trans           &trans
+&trans  &kp NON_US_BACKSLASH  &kp LEFT_PARENTHESIS  &kp MINUS   &kp RIGHT_PARENTHESIS  &kp PLUS    &kp PERCENT  &kp LEFT_BRACE    &kp SEMICOLON   &kp RIGHT_BRACE    &kp EXCLAMATION  &trans
+&trans  &trans                &kp ASTERISK          &kp COLON   &kp SLASH              &trans      &trans       &kp PIPE          &kp TILDE       &kp AMPERSAND      &trans           &trans
+                                                    &mo 3       &trans                 &trans      &trans       &trans
+                                                                &trans                 &trans      &trans
             >;
         };
 
         Mouse {
             display-name = "Mouse";
             bindings = <
-&trans          &trans  &trans          &trans          &sys_reset       &bootloader    &bootloader  &sys_reset      &trans          &trans           &trans  &trans
+&trans          &trans  &trans          &studio_unlock  &sys_reset       &bootloader    &bootloader  &sys_reset      &studio_unlock  &trans           &trans  &trans
 &trans          &trans  &mkp RCLK       &msc SCRL_UP    &mkp LCLK        &mkp MCLK      &mkp MCLK    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
 &trans          &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &mkp MB4       &mkp MB4     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &sk LEFT_SHIFT  &trans  &trans          &trans          &trans           &mkp MB5       &mkp MB5     &trans          &trans          &trans           &trans  &sk LCTRL
