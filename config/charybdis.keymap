@@ -7,6 +7,7 @@
     quick-tap-ms = <150>;
     tapping-term-ms = <250>;
     require-prior-idle-ms = <125>;
+    flavor = "hold-preferred";
 };
 
 / {
@@ -125,12 +126,12 @@
             label = "Base";
             display-name = "Base";
             bindings = <
-&kp ESC       &kp N1       &kp N2       &kp N3       &kp N4        &kp N5            &kp N6       &kp N7       &kp N8     &kp N9   &kp N0                     &kp DEL
-&kp TAB       &mt LC(Q) Q  &mt LC(W) W  &kp E        &kp R         &kp T             &mt LC(Y) Y  &kp U        &kp I      &kp O    &mt LC(P) P                &mt RIGHT_BRACKET LEFT_BRACKET
-&sk LEFT_GUI  &mt LC(A) A  &mt LC(S) S  &kp D        &mt LC(F) F   &kp G             &kp H        &kp J        &kp K      &kp L    &kp SEMI                   &kp APOS
-&sk LSHFT     &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C  &mt LC(V) V   &mt LC(B) B       &mt LC(N) N  &kp M        &kp COMMA  &kp DOT  &mt NON_US_BACKSLASH FSLH  &mt RSHIFT LS(LALT)
-                                        &lt 1 SPACE  &kp LEFT_ALT  &kp ENTER         &to 3        &lt 2 SPACE
-                                                     &kp LCTRL     &kp LEFT_SHIFT    &kp BSPC
+&kp ESC       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp N6        &kp N7       &kp N8     &kp N9   &kp N0                      &kp DEL
+&kp TAB       &hml LC(Q) Q  &hml LC(W) W  &kp E         &kp R         &kp T             &hmr LC(Y) Y  &kp U        &kp I      &kp O    &hmr LC(P) P                &hmr RIGHT_BRACKET LEFT_BRACKET
+&sk LEFT_GUI  &hml LC(A) A  &hml LC(S) S  &kp D         &hml LC(F) F  &kp G             &kp H         &kp J        &kp K      &kp L    &kp SEMI                    &kp APOS
+&sk LSHFT     &hml LC(Z) Z  &hml LC(X) X  &hml LC(C) C  &hml LC(V) V  &hml LC(B) B      &hmr LC(N) N  &kp M        &kp COMMA  &kp DOT  &hmr NON_US_BACKSLASH FSLH  &hmr RSHIFT LS(LALT)
+                                          &lt 1 SPACE   &kp LEFT_ALT  &kp ENTER         &to 3         &lt 2 SPACE
+                                                        &kp LCTRL     &kp LEFT_SHIFT    &kp BSPC
             >;
         };
 
