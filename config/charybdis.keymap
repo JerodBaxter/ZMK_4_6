@@ -4,6 +4,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
+    quick-tap-ms = <150>;
+    tapping-term-ms = <250>;
 };
 
 / {
