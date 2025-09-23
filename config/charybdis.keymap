@@ -132,7 +132,7 @@
 &kp TAB       &hml LC(Q) Q  &hml LC(W) W  &kp E         &kp R         &hml RU_CYRILLIC_IO T    &hmr LC(Y) Y  &kp U        &kp I      &kp O    &hmr LC(P) P                &hmr RIGHT_BRACKET LEFT_BRACKET
 &sk LEFT_GUI  &hml LC(A) A  &hml LC(S) S  &kp D         &hml LC(F) F  &kp G                    &kp H         &kp J        &kp K      &kp L    &hmr COLON SEMI             &kp APOS
 &sk LSHFT     &hml LC(Z) Z  &hml LC(X) X  &hml LC(C) C  &hml LC(V) V  &hml LC(B) B             &hmr LC(N) N  &kp M        &kp COMMA  &kp DOT  &hmr NON_US_BACKSLASH FSLH  &hmr RSHIFT LS(LALT)
-                                          &lt 1 SPACE   &kp LEFT_ALT  &kp ENTER                &to 3         &lt 2 SPACE
+                                          &lt 1 SPACE   &kp LEFT_ALT  &kp ENTER                &lt 3 ENTER   &lt 2 SPACE
                                                         &kp LCTRL     &kp LEFT_SHIFT           &kp BSPC
             >;
         };
