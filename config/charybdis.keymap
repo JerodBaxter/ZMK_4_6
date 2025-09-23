@@ -153,10 +153,10 @@
             label = "Raise";
             display-name = "Raise";
             bindings = <
-&trans          &trans                &kp AT_SIGN           &kp DOLLAR  &kp HASH               &trans       &trans       &trans            &kp CARET       &trans             &trans           &kp DEL
-&trans          &kp GRAVE             &kp LESS_THAN         &kp HASH    &kp GREATER_THAN       &kp SQT      &kp QMARK    &kp LEFT_BRACKET  &kp UNDERSCORE  &kp RIGHT_BRACKET  &trans           &trans
+&trans          &trans                &kp AT_SIGN           &kp DOLLAR  &kp POUND              &trans       &trans       &trans            &kp CARET       &trans             &trans           &kp DEL
+&trans          &kp GRAVE             &kp LESS_THAN         &kp EQUAL   &kp GREATER_THAN       &kp SQT      &kp QMARK    &kp LEFT_BRACKET  &kp UNDERSCORE  &kp RIGHT_BRACKET  &trans           &trans
 &trans          &kp NON_US_BACKSLASH  &kp LEFT_PARENTHESIS  &kp MINUS   &kp RIGHT_PARENTHESIS  &kp PLUS     &kp PERCENT  &kp LEFT_BRACE    &kp SEMICOLON   &kp RIGHT_BRACE    &kp EXCLAMATION  &trans
-&kp LEFT_SHIFT  &trans                &kp ASTERISK          &kp COLON   &kp SLASH              &kp EQUAL    &trans       &kp PIPE          &kp TILDE       &kp AMPERSAND      &trans           &kp LS(LEFT_ALT)
+&kp LEFT_SHIFT  &trans                &kp ASTERISK          &kp COLON   &kp SLASH              &trans       &trans       &kp PIPE          &kp TILDE       &kp AMPERSAND      &trans           &kp LS(LEFT_ALT)
                                                             &mkp LCLK   &mkp MCLK              &mkp RCLK    &kp ENTER    &kp BACKSPACE
                                                                         &to 0                  &to 1        &to 3
             >;
