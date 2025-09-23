@@ -167,10 +167,36 @@
 &trans          &trans     &trans          &studio_unlock  &sys_reset       &bootloader    &bootloader  &sys_reset      &studio_unlock  &trans           &trans  &kp DEL
 &trans          &trans     &mkp RCLK       &msc SCRL_UP    &mkp LCLK        &mkp MCLK      &mkp MCLK    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
 &trans          &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &mkp MB4       &mkp MB4     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&sk LEFT_SHIFT  &kp LCTRL  &trans          &mo 1           &trans           &mkp MB5       &mkp MB5     &trans          &trans          &trans           &trans  &kp LS(LEFT_ALT)
+&sk LEFT_SHIFT  &kp LCTRL  &trans          &mo 4           &mo 5            &mkp MB5       &mkp MB5     &trans          &trans          &trans           &trans  &kp LS(LEFT_ALT)
                                            &mkp LCLK       &mkp MCLK        &mkp RCLK      &kp RET      &kp BACKSPACE
                                                            &to 0            &to 1          &to 2
             >;
+        };
+
+        scroll_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
+            >;
+
+            label = "SCROLL";
+        };
+
+        sniper_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
+            >;
+
+            label = "SNIPER";
         };
     };
 };
