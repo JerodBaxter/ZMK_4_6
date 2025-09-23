@@ -128,12 +128,12 @@
             label = "Base";
             display-name = "Base";
             bindings = <
-&kp ESC       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp N6        &kp N7       &kp N8     &kp N9   &kp N0                      &kp DEL
-&kp TAB       &hml LC(Q) Q  &hml LC(W) W  &kp E         &kp R         &kp T             &hmr LC(Y) Y  &kp U        &kp I      &kp O    &hmr LC(P) P                &hmr RIGHT_BRACKET LEFT_BRACKET
-&sk LEFT_GUI  &hml LC(A) A  &hml LC(S) S  &kp D         &hml LC(F) F  &kp G             &kp H         &kp J        &kp K      &kp L    &kp SEMI                    &kp APOS
-&sk LSHFT     &hml LC(Z) Z  &hml LC(X) X  &hml LC(C) C  &hml LC(V) V  &hml LC(B) B      &hmr LC(N) N  &kp M        &kp COMMA  &kp DOT  &hmr NON_US_BACKSLASH FSLH  &hmr RSHIFT LS(LALT)
-                                          &lt 1 SPACE   &kp LEFT_ALT  &kp ENTER         &to 3         &lt 2 SPACE
-                                                        &kp LCTRL     &kp LEFT_SHIFT    &kp BSPC
+&kp ESC       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                   &kp N6        &kp N7       &kp N8     &kp N9   &kp N0                      &kp DEL
+&kp TAB       &hml LC(Q) Q  &hml LC(W) W  &kp E         &kp R         &hml RU_CYRILLIC_IO T    &hmr LC(Y) Y  &kp U        &kp I      &kp O    &hmr LC(P) P                &hmr RIGHT_BRACKET LEFT_BRACKET
+&sk LEFT_GUI  &hml LC(A) A  &hml LC(S) S  &kp D         &hml LC(F) F  &kp G                    &kp H         &kp J        &kp K      &kp L    &hmr COLON SEMI             &kp APOS
+&sk LSHFT     &hml LC(Z) Z  &hml LC(X) X  &hml LC(C) C  &hml LC(V) V  &hml LC(B) B             &hmr LC(N) N  &kp M        &kp COMMA  &kp DOT  &hmr NON_US_BACKSLASH FSLH  &hmr RSHIFT LS(LALT)
+                                          &lt 1 SPACE   &kp LEFT_ALT  &kp ENTER                &to 3         &lt 2 SPACE
+                                                        &kp LCTRL     &kp LEFT_SHIFT           &kp BSPC
             >;
         };
 
@@ -190,12 +190,12 @@
 
         sniper_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+&trans  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &mkp LCLK  &mkp MCLK  &mkp RCLK    &trans  &trans
+                                   &trans     &trans       &trans
             >;
 
             label = "SNIPER";
