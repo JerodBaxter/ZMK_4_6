@@ -102,7 +102,7 @@
             compatible = "zmk,modifier";
             key-code = <KEY_LEFTCTL KEY_RIGHTCTL>;
         };
-    }; 
+    };
 
     trackball_zoom_listener {
         compatible = "zmk,input-behavior-listener";
@@ -115,7 +115,7 @@
         scale-multiplier = <1>;
         scale-divisor = <4>;
         bindings = <&ib_zoom_base 1 16>;
-        bindings = <&ib_zoom_slow 1 64> &mod_ctrl;
+        bindings = <&ib_zoom_slow 1 64>, &mod_ctrl;
     };
 
     ib_zoom_base: ib_zoom_base {
@@ -245,7 +245,7 @@
 &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LCTRL  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &mkp LCLK  &mkp MCLK  &trans    &trans  &trans
                                    &mkp RCLK  &trans    &trans
             >;
