@@ -74,8 +74,8 @@
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
-        bindings = <&ib_wheel_scaler 1 16>;
-        bindings = <&ib_hwheel_scaler 1 16>;
+        bindings = <&ib_wheel_scaler 1 4>;
+        bindings = <&ib_hwheel_scaler 1 4>;
     };
 
     ib_wheel_scaler: ib_wheel_scaler {
