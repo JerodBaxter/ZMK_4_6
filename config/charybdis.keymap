@@ -12,6 +12,11 @@
     flavor = "hold-preferred";
 };
 
+&lt {
+    tapping-term-ms = <240>;
+    quick-tap-ms = <150>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -121,15 +126,6 @@
     };
 
     behaviors {
-        lt: layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <240>;
-            quick-tap-ms = <150>;
-            bindings = <&mo>, <&kp>;
-        };
-
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
@@ -164,12 +160,12 @@
             label = "Base";
             display-name = "Base";
             bindings = <
-&kp ESC       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                   &kp N6        &kp N7       &kp N8     &kp N9   &kp N0                      &kp DEL
-&kp TAB       &hml LC(Q) Q  &hml LC(W) W  &kp E         &kp R         &hml RU_CYRILLIC_IO T    &hmr LC(Y) Y  &kp U        &kp I      &kp O    &hmr LC(P) P                &hmr RIGHT_BRACKET LEFT_BRACKET
-&sk LEFT_GUI  &hml LC(A) A  &hml LC(S) S  &kp D         &hml LC(F) F  &kp G                    &kp H         &kp J        &kp K      &kp L    &hmr COLON SEMI             &kp APOS
-&sk LSHFT     &hml LC(Z) Z  &hml LC(X) X  &hml LC(C) C  &hml LC(V) V  &hml LC(B) B             &hmr LC(N) N  &kp M        &kp COMMA  &kp DOT  &hmr NON_US_BACKSLASH FSLH  &hmr RSHIFT LS(LALT)
-                                          &lt 1 SPACE   &kp LEFT_ALT  &kp ENTER                &kp DELETE    &lt 2 SPACE
-                                                        &kp LCTRL     &kp LEFT_SHIFT           &kp BSPC
+&kp ESC       &kp N1        &kp N2        &kp N3        &kp N4             &kp N5                   &kp N6           &kp N7       &kp N8     &kp N9   &kp N0                      &kp DEL
+&kp TAB       &hml LC(Q) Q  &hml LC(W) W  &kp E         &kp R              &hml RU_CYRILLIC_IO T    &hmr LC(Y) Y     &kp U        &kp I      &kp O    &hmr LC(P) P                &hmr RIGHT_BRACKET LEFT_BRACKET
+&sk LEFT_GUI  &hml LC(A) A  &hml LC(S) S  &kp D         &hml LC(F) F       &kp G                    &kp H            &kp J        &kp K      &kp L    &hmr COLON SEMI             &kp APOS
+&sk LSHFT     &hml LC(Z) Z  &hml LC(X) X  &hml LC(C) C  &hml LC(V) V       &hml LC(B) B             &hmr LC(N) N     &kp M        &kp COMMA  &kp DOT  &hmr NON_US_BACKSLASH FSLH  &hmr RSHIFT LS(LALT)
+                                          &lt 1 SPACE   &hml LEFT_ALT TAB  &kp ENTER                &kp DELETE       &lt 2 SPACE
+                                                        &kp LCTRL          &kp LEFT_SHIFT           &lt 1 BACKSPACE
             >;
         };
 
@@ -177,12 +173,12 @@
             label = "Lower";
             display-name = "Lower";
             bindings = <
-&kp F1          &kp F2     &kp F3              &kp F4    &kp F5         &kp F6        &kp F7           &kp F8           &kp F9           &kp F10          &kp F11          &kp F12
-&trans          &trans     &kp HOME            &kp UP    &kp END        &kp INSERT    &kp PAGE_UP      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp STAR         &kp SLASH
-&trans          &trans     &kp LEFT            &kp DOWN  &kp RIGHT      &kp ENTER     &kp PAGE_DOWN    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &hmr EQUAL PLUS  &kp COMMA
-&kp LEFT_SHIFT  &kp LCTRL  &kp LC(LEFT_ARROW)  &kp CAPS  &kp LC(RIGHT)  &kp DEL       &kp PRINTSCREEN  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp MINUS        &kp ENTER
-                                               &trans    &mkp MCLK      &mkp RCLK     &kp KP_NUMBER_0  &kp PERIOD
-                                                         &to 0          &to 2         &to 3
+&kp F1          &kp F2     &kp F3              &kp F4    &kp F5         &kp F6        &kp F7                      &kp F8           &kp F9           &kp F10          &kp F11          &kp F12
+&trans          &kp HOME   &kp TAB             &kp UP    &kp END        &kp INSERT    &kp PAGE_UP                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp STAR         &kp SLASH
+&kp LEFT_ALT    &kp END    &kp LEFT            &kp DOWN  &kp RIGHT      &kp ENTER     &kp PAGE_DOWN               &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &hmr EQUAL PLUS  &kp COMMA
+&kp LEFT_SHIFT  &kp LCTRL  &kp LC(LEFT_ARROW)  &kp CAPS  &kp LC(RIGHT)  &kp DEL       &hmr PRINTSCREEN BACKSPACE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp MINUS        &kp ENTER
+                                               &trans    &trans         &trans        &kp KP_NUMBER_0             &kp PERIOD
+                                                         &trans         &trans        &hmr RIGHT_SHIFT DELETE
             >;
         };
 
@@ -190,24 +186,24 @@
             label = "Raise";
             display-name = "Raise";
             bindings = <
-&trans          &trans                &kp AT_SIGN           &kp DOLLAR  &kp POUND              &trans       &trans       &trans            &kp CARET       &trans             &trans           &kp DEL
-&trans          &kp GRAVE             &kp LESS_THAN         &kp EQUAL   &kp GREATER_THAN       &kp SQT      &kp QMARK    &kp LEFT_BRACKET  &kp UNDERSCORE  &kp RIGHT_BRACKET  &trans           &trans
-&trans          &kp NON_US_BACKSLASH  &kp LEFT_PARENTHESIS  &kp MINUS   &kp RIGHT_PARENTHESIS  &kp PLUS     &kp PERCENT  &kp LEFT_BRACE    &kp SEMICOLON   &kp RIGHT_BRACE    &kp EXCLAMATION  &trans
-&kp LEFT_SHIFT  &trans                &kp ASTERISK          &kp COLON   &kp SLASH              &trans       &trans       &kp PIPE          &kp TILDE       &kp AMPERSAND      &trans           &kp LS(LEFT_ALT)
-                                                            &mkp LCLK   &mkp MCLK              &mkp RCLK    &kp ENTER    &trans
-                                                                        &to 0                  &to 1        &to 3
+&trans          &trans                &kp AT_SIGN           &kp DOLLAR  &kp POUND              &trans      &trans       &trans            &kp CARET       &trans             &trans           &trans
+&trans          &kp GRAVE             &kp LESS_THAN         &kp EQUAL   &kp GREATER_THAN       &kp SQT     &kp QMARK    &kp LEFT_BRACKET  &kp UNDERSCORE  &kp RIGHT_BRACKET  &trans           &trans
+&trans          &kp NON_US_BACKSLASH  &kp LEFT_PARENTHESIS  &kp MINUS   &kp RIGHT_PARENTHESIS  &kp PLUS    &kp PERCENT  &kp LEFT_BRACE    &kp SEMICOLON   &kp RIGHT_BRACE    &kp EXCLAMATION  &trans
+&kp LEFT_SHIFT  &trans                &kp ASTERISK          &kp COLON   &kp SLASH              &trans      &trans       &kp PIPE          &kp TILDE       &kp AMPERSAND      &trans           &kp LS(LEFT_ALT)
+                                                            &trans      &trans                 &trans      &trans       &trans
+                                                                        &trans                 &trans      &trans
             >;
         };
 
         Mouse {
             display-name = "Mouse";
             bindings = <
-&trans          &trans     &trans          &studio_unlock  &sys_reset       &bootloader    &bootloader  &sys_reset      &studio_unlock  &trans           &trans  &kp DEL
-&kp TAB         &trans     &mkp RCLK       &msc SCRL_UP    &mkp LCLK        &mkp MCLK      &mkp MCLK    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
+&trans          &trans     &trans          &studio_unlock  &sys_reset       &bootloader    &bootloader  &sys_reset      &studio_unlock  &trans           &trans  &trans
+&trans          &trans     &mkp RCLK       &msc SCRL_UP    &mkp LCLK        &mkp MCLK      &mkp MCLK    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
 &trans          &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &mkp MB4       &mkp MB4     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&sk LEFT_SHIFT  &kp LCTRL  &mo 6           &mo 4           &mo 5            &mkp MB5       &mkp MB5     &mkp LCLK       &mkp RCLK       &mkp MCLK        &trans  &kp LS(LEFT_ALT)
-                                           &mkp LCLK       &mkp MCLK        &mkp RCLK      &kp RET      &kp BACKSPACE
-                                                           &to 0            &to 1          &to 2
+&sk LEFT_SHIFT  &kp LCTRL  &mo 6           &mo 4           &mo 5            &mkp MB5       &mkp MB5     &mkp LCLK       &mkp RCLK       &mkp MCLK        &trans  &trans
+                                           &mkp LCLK       &mkp MCLK        &kp ENTER      &trans       &trans
+                                                           &mkp RCLK        &kp TAB        &trans
             >;
         };
 
@@ -226,12 +222,12 @@
 
         sniper_layer {
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp LCLK  &mkp MCLK  &mkp RCLK    &trans  &trans
-                                   &trans     &trans       &trans
+&trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &mkp LCLK  &mkp MCLK  &trans    &trans  &trans
+                                   &mkp RCLK  &trans    &trans
             >;
 
             label = "SNIPER";
@@ -244,7 +240,7 @@
 &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &mkp LCLK  &mkp MCLK  &trans    &trans  &trans
-                                   &trans     &trans    &trans
+                                   &mkp RCLK  &trans    &trans
             >;
 
             label = "ZOOM";
