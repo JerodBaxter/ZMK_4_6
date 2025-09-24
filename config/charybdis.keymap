@@ -45,7 +45,7 @@
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
-        scale-divisor = <1>;
+        scale-divisor = <2>;
         bindings = <&ib_toggle_layer 3>;
     };
 
@@ -90,6 +90,34 @@
         #binding-cells = <2>;
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_HWHEEL>;
+    };
+
+    trackball_zoom_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball>;
+        layers = <6>;
+        evt-type = <INPUT_EV_REL>;
+        circular-mode;
+        circular-deadzone = <10>;
+        circular-radius = <50>;
+        scale-multiplier = <1>;
+        scale-divisor = <4>;
+        bindings = <&ib_zoom_base 1 16>;
+        bindings = <&ib_zoom_slow 1 64> &mod_ctrl;
+    };
+
+    ib_zoom_base: ib_zoom_base {
+        compatible = "zmk,input-behavior-scaler";
+        #binding-cells = <2>;
+        evt-type = <INPUT_EV_REL>;
+        input-code = <INPUT_REL_WHEEL>;
+    };
+
+    ib_zoom_slow: ib_zoom_slow {
+        compatible = "zmk,input-behavior-scaler";
+        #binding-cells = <2>;
+        evt-type = <INPUT_EV_REL>;
+        input-code = <INPUT_REL_WHEEL>;
     };
 
     behaviors {
