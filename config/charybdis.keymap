@@ -100,7 +100,7 @@
     modifiers {
         mod_ctrl: mod_ctrl {
             compatible = "zmk,modifier";
-            key-code = <KEY_LEFTCTL KEY_RIGHTCTL>;
+            key-code = <KEY_LEFTCTL>;
         };
     };
 
