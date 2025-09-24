@@ -97,14 +97,6 @@
         input-code = <INPUT_REL_HWHEEL>;
     };
 
-    modifiers {
-        mod_ctrl: mod_ctrl {
-            compatible = "zmk,modifier";
-            #binding-cells = <2>;
-            key-code = <LEFT_CONTROL>;
-        };
-    };
-
     trackball_zoom_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
@@ -116,17 +108,9 @@
         scale-multiplier = <1>;
         scale-divisor = <4>;
         bindings = <&ib_zoom_base 1 16>;
-        bindings = <&ib_zoom_slow 1 64 &mod_ctrl>;
     };
 
     ib_zoom_base: ib_zoom_base {
-        compatible = "zmk,input-behavior-scaler";
-        #binding-cells = <2>;
-        evt-type = <INPUT_EV_REL>;
-        input-code = <INPUT_REL_WHEEL>;
-    };
-
-    ib_zoom_slow: ib_zoom_slow {
         compatible = "zmk,input-behavior-scaler";
         #binding-cells = <2>;
         evt-type = <INPUT_EV_REL>;
