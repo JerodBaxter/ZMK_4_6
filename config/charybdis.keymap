@@ -97,6 +97,13 @@
         input-code = <INPUT_REL_HWHEEL>;
     };
 
+    modifiers {
+        mod_ctrl: mod_ctrl {
+            compatible = "zmk,modifier";
+            key-code = <KEY_LEFTCTL KEY_RIGHTCTL>;
+        };
+    }; 
+
     trackball_zoom_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
